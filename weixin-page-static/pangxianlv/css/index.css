@@ -1,0 +1,712 @@
+/*#startPage {width: 100%}*/
+*{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	outline:none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html,body {width: 100%; height: 100%}
+img{width: 100%;height:100%;display:block;}
+input{ border:none;background:none;width: 100%; height: 100%;font-size: 15px;}
+.name{ position: absolute;top: 53%;left: 32.5%;width: 42%;height: 6.1%;}
+.tel{ position: absolute;top: 65%;left: 32.5%;width: 42%;height: 6.1%;}
+
+.pic{
+	width: 50%;
+  height: 28.17%;
+  position: absolute;
+  top: 8%;
+  left: 25%;
+}
+.all {width:100%;height:100%;display:none;}
+#startPage {width:100%;height:100%;}
+.startBtn { width: 35%;height: 11.5%;position: absolute;top: 79%;left: 33%;z-index: 3;cursor: pointer;}
+#male {
+	  width: 28.4%;
+	  height: 16%;
+	  position: absolute;
+	  top: 46.5%;
+	  left: 36.5%;
+	  z-index: 3;
+	  cursor: pointer;
+}
+
+#start {
+	width: 24%;
+	height: 9.5%;
+	position: absolute;
+	top: 84.5%;
+	left: 6.5%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#female {
+	width: 28.4%;
+	height: 16.5%;
+	position: absolute;
+	top: 63%;
+	left: 36.5%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#guess {
+	width: 37.5%;
+	height: 16.5%;
+	position: absolute;
+	top: 80.12%;
+	left: 36.46%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q2optionA {
+	width: 63.75%;
+	height: 7.63%;
+	position: absolute;
+	top: 49%;
+	left: 19.58%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q2optionB {
+	width: 63.75%;
+	height: 7.63%;
+	position: absolute;
+	top: 58.13%;
+	left: 19.58%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q2optionC {
+	width: 63.75%;
+	height: 7.63%;
+	position: absolute;
+	top: 67.5%;
+	left: 19.58%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q2optionD {
+	width: 63.75%;
+	height: 7.63%;
+	position: absolute;
+	top: 76.13%;
+	left: 19.58%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q3optionA {
+	width: 66.67%;
+	height: 7.63%;
+	position: absolute;
+	top: 46.5%;
+	left: 18.4%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q3optionB {
+	width: 71.88%;
+	position: absolute;
+	top: 56.125%;
+	left: 16.04%;
+	z-index: 3;
+	cursor: pointer;
+	height: 8.375%;
+}
+
+#Q3optionC {
+	width: 67.5%;
+	position: absolute;
+	top: 66.125%;
+	left: 16.6667%;
+	z-index: 3;
+	cursor: pointer;
+	height: 8.375%;
+}
+
+#Q3optionD {
+	width: 67.5%;
+	position: absolute;
+	top: 76%;
+	left: 17.9167%;
+	z-index: 3;
+	cursor: pointer;
+	height: 8.375%;
+}
+
+#Q4optionA {
+	width: 63.9583%;
+	height: 7.625%;
+	position: absolute;
+	top: 47%;
+	left: 19.5833%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q4optionB {
+	width: 63.9583%;
+	height: 7.625%;
+	position: absolute;
+	top: 55.5%;
+	left: 19.5833%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q4optionC {
+	width: 63.9583%;
+	height: 7.625%;
+	position: absolute;
+	top: 64.75%;
+	left: 19.5833%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q4optionD {
+	width: 63.9583%;
+	height: 7.625%;
+	position: absolute;
+	top: 73.375%;
+	left: 19.5833%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q5optionA {
+	width: 67.2917%;
+	height: 7.375%;
+	position: absolute;
+	top: 46.125%;
+	left: 17.0833%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q5optionB {
+	width: 67.2917%;
+	height: 7.375%;
+	position: absolute;
+	top: 55.375%;
+	left: 16.6667%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q5optionC {
+	width: 67.2917%;
+	height: 7.375%;
+	position: absolute;
+	top: 64.375%;
+	left: 16.25%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q5optionD {
+	width: 67.2917%;
+	height: 8.625%;
+	position: absolute;
+	top: 73.375%;
+	left: 16.25%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q6optionA {
+	width: 67.2917%;
+	height: 7.375%;
+	position: absolute;
+	top: 50.5%;
+	left: 17.2917%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q6optionB {
+	width: 62%;
+	height: 7%;
+	position: absolute;
+	top: 58.875%;
+	left: 17.0833%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q6optionC {
+	width: 67.2917%;
+	height: 7.375%;
+	position: absolute;
+	top: 66%;
+	left: 18.75%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q6optionD {
+	width: 67.2917%;
+	height: 7.375%;
+	position: absolute;
+	top: 73.375%;
+	left: 17.5%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#runner {
+	width: 13.5417%;
+	height: 9.375%;
+	position: absolute;
+	top: 72.375%;
+	left: 3.33333%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q7optionA {
+	width: 43.3333%;
+	height: 7.375%;
+	position: absolute;
+	top: 48.5%;
+	left: 29.1667%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q7optionB {
+	width: 43.3333%;
+	height: 7.375%;
+	position: absolute;
+	top: 57.25%;
+	left: 29.375%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q7optionC {
+	width: 43.3333%;
+	height: 7.375%;
+	position: absolute;
+	top: 65%;
+	left: 29.1667%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q7optionD {
+	width: 45.8333%;
+	height: 7.375%;
+	position: absolute;
+	top: 73%;
+	left: 31.6667%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+/*杜蕾斯套装*/
+#q8option0 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 64%;
+	left: 6.25%;
+	z-index: 3;
+	cursor: pointer
+}
+
+/*跑鞋*/
+#q8option1 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 45%;
+	left: 5.41667%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+/*高跟鞋*/
+#q8option2 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 45%;
+	left: 37.2917%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+/*快干衣*/
+#q8option3 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 45%;
+	left: 69.5833%;
+	z-index: 3;
+	cursor: pointer;
+}
+/*苹果表*/
+#q8option4 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 54%;
+	left: 69.1667%;
+	z-index: 3;
+	cursor: pointer;
+}
+/*心率带*/
+#q8option5 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 54%;
+	left: 37.5%;
+	z-index: 3;
+	cursor: pointer;
+}
+/*手机*/
+#q8option6 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 54%;
+	left: 6.25%;
+	z-index: 3;
+	cursor: pointer;
+}
+/*荧光套装*/
+#q8option7 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 74%;
+	left: 6.04167%;
+	z-index: 3;
+	cursor: pointer;
+}
+/*食物*/
+#q8option8 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 74%;
+	left: 37.5%;
+	z-index: 3;
+	cursor: pointer;
+}
+/*水*/
+#q8option9 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 74%;
+	left: 69.375%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+
+/*夜光套装*/
+#q8option10 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 64%;
+	left: 37.5%;
+	z-index: 3;
+	cursor: pointer;
+}
+/*化妆包*/
+#q8option11 {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 64%;
+	left: 69.1667%;
+	z-index: 3;
+	cursor: pointer;
+}
+#Q9optionA {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 45%;
+	left: 6.25%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q9optionB {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 45%;
+	left: 37%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q9optionC {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 45%;
+	left: 69%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q9optionD {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 58%;
+	left: 69%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q9optionE {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 58%;
+	left: 37%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q9optionF {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 58%;
+	left: 6.25%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q9optionG {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 71%;
+	left: 6.25%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q9optionH {
+	width: 27.0833%;
+	height: 8.25%;
+	position: absolute;
+	top: 71%;
+	left: 69%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q10optionA {
+	width: 43.3333%;
+	height: 7.375%;
+	position: absolute;
+	top: 44.75%;
+	left: 28%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q10optionB {
+	width: 43.3333%;
+	height: 7.375%;
+	position: absolute;
+	top: 53.75%;
+	left: 28%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q10optionC {
+	width: 43.3333%;
+	height: 7.375%;
+	position: absolute;
+	top: 61.75%;
+	left: 28%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q10optionD {
+	width: 61.0417%;
+	height: 16.5%;
+	position: absolute;
+	top: 69.75%;
+	left: 28%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q11optionA {
+	width: 50%;
+	height: 8.25%;
+	position: absolute;
+	top: 44.25%;
+	left: 27%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q11optionB {
+	width: 50%;
+	height: 8.25%;
+	position: absolute;
+	top: 53.25%;
+	left: 27%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q11optionC {
+	width: 50%;
+	height: 8.25%;
+	position: absolute;
+	top: 61.75%;
+	left: 27%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#Q11optionD {
+	width: 50%;
+	height: 8.25%;
+	position: absolute;
+	top: 70.75%;
+	left: 27%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+.next {
+	width: 32.08%;
+	height: 7.63%;
+	position: absolute;
+	top: 90%;
+	left: 57.5%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+.back {
+	width: 32.08%;
+	height: 7.63%;
+	position: absolute;
+	top: 90%;
+	left: 10.63%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#showrslt {
+	width: 32.08%;
+	height: 7.63%;
+	position: absolute;
+	top: 90%;
+	left: 57.5%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+.apply {
+	width: 28.125%;
+	height: 7.63%;
+	position: absolute;
+	top: 86.25%;
+	left: 5.20833%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+.share {
+	width: 28.125%;
+	height: 7.63%;
+	position: absolute;
+	top: 86.25%;
+	left: 36%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+.tryAgain {
+	width: 28.125%;
+	height: 7.63%;
+	position: absolute;
+	top: 86.25%;
+	left: 67%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+
+.submit {
+	width: 28.125%;
+	height: 7.63%;
+	position: absolute;
+	top: 86.25%;
+	left: 17%;
+	z-index: 3;
+	cursor: pointer;
+}
+.submit_fanhui{
+	width: 28.125%;
+	height: 7.63%;
+	position: absolute;
+	top: 86.25%;
+	left: 57%;
+	z-index: 3;
+	cursor: pointer;
+}
+#qr {
+	width: 28.125%;
+	height: 28%;
+	position: absolute;
+	top: 86.25%;
+	left: 5.20833%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#loading {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: 10000;
+	cursor: pointer;
+}
+#loading_num{
+	width: 100%;
+  height: auto;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  font-size: 25px;
+  text-align: center;
+  font-family: "黑体";
+
+}
+.zhezhao{ width:100%;height:100%;background:#000;opacity:0.4;position:absolute;top:0;left:0;display:none;z-index:100001;}
+.MyAlert{width:60%;height:100px;border-radius:4px;border:1px solid #ccc;background:#FFF;position:absolute;top:25%;left:20%;display:none;z-index:999999;}
+.alert_text{width:100%;height:50px;line-height:50px;text-align:center;position: relative;}
+.alert_btn{width:50%;height:50px;line-height:50px;text-align:center;margin-left:25%;position: relative;}
