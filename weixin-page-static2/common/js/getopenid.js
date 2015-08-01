@@ -13,14 +13,18 @@ function getOpenId(){
 			var fromurl=location.href;
 			var appid;
 			$.ajax({
-				url: api_url+ prj_name + '/appwx',
-				success: function(json) {
-					if (!json || json.code != 200) {
+				url: api_url + '/common/getopenid/',
+				data:{
+					key: {'appid'}, 
+					prj:prj_name
+				},
+				success: function(result) {
+					if (!result || result.code != 200) {
 						return;
 					}
-					console.log(json.appid);
-					if(json.appid){
-						appid = json.appid;
+					console.log(result.appid);
+					if(result.appid){
+						appid = result.appid;
 					}
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -39,15 +43,30 @@ function getOpenId(){
         {   
         	$.ajax({
         		type:'get',
-        		url:api_url + '/wxopenid', 
+        		url:api_url + '/common/getopenid/', 
         		async:false,
         		cache:false,
-        		data:{code:access_code},
+        		data:{
+        			key: {'appid', 'appsecret'}, 
+        			prj:prj_name, 
+        		},
         		dataType:'json',
-        		success:function(result){                 
-        			if (result!=null && result.hasOwnProperty('openid') && result.openid!=""){
-        				addcookie('wxopenid',result.openid,360000);                           
-        				getlogininfo(result.openid);
+        		success:function(result){      
+      				if (!result || result.code != 200) {
+						return;
+					}
+					console.log(result.appid);
+					if(result.appid){
+						appid = result.appid;
+					}
+
+        			if (result!=null && result.appid!="" && result.appsecret!=""){
+        				var url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=" + result.appid + "appid&secret=" + result.appsecret + "&code=" + access_code + "&grant_type=authorization_code";
+			            console.log(url);
+			        	var openid = getOpenId(url);
+
+        				addcookie('wxopenid',openid,360000);                           
+        				getlogininfo(openid);
         			} 
         			else
         			{
@@ -55,7 +74,8 @@ function getOpenId(){
         				location.href=fromurl;
         			}
         		}
-        	});    
+        	});  
+        	
         }
     }else{
     	if (wxopenid!='')
@@ -118,7 +138,25 @@ function getCookie(name) {
 	return null;
 }
 
-
+function getOpenId(openid_url){
+	$.ajax({
+		type:'get',
+		url: openid_url,
+		success: function(result) {
+			if (!result || result.openid != 200) {
+				return;
+			}
+			console.log(result.openid);
+			return result.openid
+		},
+		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			console.log('error');
+			alert(XMLHttpRequest.status);
+			alert(XMLHttpRequest.readyState);
+			alert(textStatus);
+		}
+	});
+}
 
 
 
